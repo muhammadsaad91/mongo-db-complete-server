@@ -4,7 +4,7 @@ function post_create() {
     let age = document.getElementById('age').value;
     let roll_no = document.getElementById('roll_no').value;
 
-    axios.post('https://mongo-db-server-abd.herokuapp.com/user', {
+    axios.post('https://muhammadsaad.herokuapp.com/user', {
         student_name: student_name,
         father_name: father_name,
         age: age,
@@ -24,7 +24,7 @@ function post_create() {
 }
 
 function get_all() {
-    axios.get('https://mongo-db-server-abd.herokuapp.com/users')
+    axios.get('https://https://muhammadsaad.herokuapp.com/users')
         .then(function(response) {
             console.log(response);
             $html = '';
@@ -81,7 +81,7 @@ function update_student($obj) {
     let age = document.getElementById('age_' + id).value;
     let roll_no = document.getElementById('roll_no_' + id).value;
 
-    axios.put('https://mongo-db-server-abd.herokuapp.com/user/' + id, {
+    axios.put('https://muhammadsaad.herokuapp.com/user/' + id, {
         student_name: student_name,
         father_name: father_name,
         age: age,
@@ -98,7 +98,7 @@ function update_student($obj) {
 function delete_student($obj) {
     console.log($obj);
     let id = $obj.getAttribute('id');
-    axios.delete('https://mongo-db-server-abd.herokuapp.com/user/' + id)
+    axios.delete('https://muhammadsaad.herokuapp.com/user/' + id)
         .then(function(response) {
             console.log(response);
             alert("employee deleted");
